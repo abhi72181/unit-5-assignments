@@ -4,29 +4,29 @@ function App() {
   
 
   const [inv,setInv]=useState({
-    scores:76,
-    wickets:2,
-    balls:50
+    Score:76,
+    Wicket:2,
+    Ball:50
   })
     
   const addone=(value)=>{
-    setInv({...inv,scores:inv.scores + value})
+    setInv({...inv,Score:inv.Score + value})
   }
 
   const addfour=(value)=>{
-    setInv({...inv,scores:inv.scores + value})
+    setInv({...inv,Score:inv.Score + value})
   }
 
   const addsix=(value)=>{
-    setInv({...inv,scores:inv.scores + value})
+    setInv({...inv,Score:inv.Score + value})
   }
     
   const addwicket=(value)=>{
-    setInv({...inv,wickets:inv.wickets + value})
+    setInv({...inv,Wicket:inv.Wicket + value})
   }
 
   const addball=(value)=>{
-    setInv({...inv,balls:inv.balls + value})
+    setInv({...inv,Ball:inv.Ball + value})
   }
   return (
     <div className="App">
@@ -36,7 +36,7 @@ function App() {
           Score:
           <h1 className="scoreCount">
             {
-              inv.scores
+              inv.Score
             }
           </h1>
         </div>
@@ -44,7 +44,7 @@ function App() {
           Wicket:
           <h1 className="wicketCount">
             {
-              inv.wickets
+              inv.Wicket
             }
           </h1>
         </div>
@@ -56,7 +56,7 @@ function App() {
               // Show Over here in the format: "over.ball" eg: 4.5 means 4th over and 5th ball
               // if 1 more ball is thrown then over is now 5.0
               // you have to write logic to form this string from current ball number.
-               inv.balls
+               `${Math.floor(inv.Ball/6)}.${inv.Ball%6}`
             }
           </h1>
         </div>
@@ -83,7 +83,7 @@ function App() {
       </div>
 
       {/* If score reaches greater than 100, show text "India Won" without quotes in h1 tag with class name 'status' */}
-      <h1 className="status" >{inv.scores>100?"India Won":""}</h1>
+      <h1 className="status" >{inv.Score>100?"India Won":""}</h1>
     </div>
   );
 }
