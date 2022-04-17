@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "todos": "learn vue",
+      "id": 1
+    },
+    {
+      "todos": "learn vue",
+      "id": 2
+    },
+    {
+      "todos": "learn vue",
+      "id": 3
+    }
+  ]
+}

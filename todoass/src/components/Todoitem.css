@@ -1,0 +1,13 @@
+.item {
+    width:80%;
+    height: 50px;
+    margin: auto;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    
+    margin-top: 10px;
+    border-radius: 20px;
+    
+    text-align: left;
+  }
